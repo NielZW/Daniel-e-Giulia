@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Site de Namoro</title>
+
+    <!-- Estilos CSS inline -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ffc0cb; /* Rosa claro */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #800000; /* Vermelho escuro */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .banner {
+            background-color: #ffb6c1; /* Rosa claro */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .banner h2 {
+            color: #800000; /* Vermelho escuro */
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .banner img {
+            max-width: 100%;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #countdown {
+            font-size: 24px;
+            font-weight: bold;
+            color: #800000; /* Vermelho escuro */
+        }
+
+        footer {
+            background-color: #ffc0cb; /* Rosa claro */
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            color: #800000; /* Vermelho escuro */
+        }
+
+        .spotify-embed {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Estilos românticos adicionais */
+        #inicio, #cronometro, #conhecemos, #lugares, #playlist {
+            background-color: #ffe6e6; /* Rosa claro */
+            border: 1px solid #ffb6c1; /* Rosa claro */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #inicio h2, #cronometro h2, #conhecemos h2, #lugares h2, #playlist h2 {
+            color: #800000; /* Vermelho escuro */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #conhecemos p, #lugares ul {
+            color: #333; /* Cor padrão */
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nosso Site de Namoro</h1>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="banner">
+                <h2>Nosso Amor em Fotos</h2>
+                <!-- Aqui você pode adicionar suas fotos -->
+                <img src="foto1.jpg" alt="Foto do casal">
+                <img src="foto2.jpg" alt="Foto do casal">
+                <!-- Adicione mais fotos conforme necessário -->
+            </div>
+        </section>
+
+        <section id="cronometro">
+            <h2>Aniversário de Namoro</h2>
+            <div id="countdown"></div>
+        </section>
+
+        <section id="conhecemos">
+            <h2>Como Nos Conhecemos</h2>
+            <!-- Atualizado conforme solicitado -->
+            <p>Nos conhecemos na escola, éramos da mesma sala e fazíamos parte do mesmo grupo de amigos, até que começamos a trocar mensagens e se conhecer melhor.</p>
+        </section>
+
+        <section id="lugares">
+            <h2>Lugares que Já Fomos</h2>
+            <!-- Atualizado conforme solicitado -->
+            <ul>
+                <li>Santos</li>
+                <li>São Vicente</li>
+                <li>Museu da USP</li>
+            </ul>
+        </section>
+
+        <section id="playlist">
+            <h2>Playlist Romântica</h2>
+            <!-- Coloque o código de incorporação do Spotify aqui -->
+            <iframe class="spotify-embed" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5Zp9VBYxY7D" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Nosso Site de Namoro</p>
+    </footer>
+
+    <!-- JavaScript inline -->
+    <script>
+        // Função para calcular e atualizar o cronômetro em tempo real
+        function atualizarCronometro() {
+            // Data atual
+            var hoje = new Date();
+
+            // Aniversário de namoro (2 de setembro)
+            var aniversarioNamoro = new Date(hoje.getFullYear(), 8, 2);
+
+            // Se o aniversário de namoro já passou este ano, calcular para o próximo ano
+            if (hoje > aniversarioNamoro) {
+                aniversarioNamoro.setFullYear(aniversarioNamoro.getFullYear() + 1);
+            }
+
+            // Calcular a diferença em milissegundos entre as datas
+            var diferenca = aniversarioNamoro - hoje;
+
+            // Calcular dias, horas, minutos e segundos restantes
+            var dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            var horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutos = Math.floor((diferenca %
